@@ -1,0 +1,154 @@
+[COMMAND]: startengine 
+[ERROR]: Engine doesn't have a connected tank !
+====================================================
+[COMMAND]: addfueltank 300 
+[Info]: New Tank 1
+====================================================
+[COMMAND]: addfueltank 150 
+[Info]: New Tank 2
+====================================================
+[COMMAND]: addfueltank 100 
+[Info]: New Tank 3
+====================================================
+[COMMAND]: filltank 1 150 
+[Info]: Valve is Open
+[Info]: 150 Unit Fuel Added to Tank 1
+====================================================
+[COMMAND]: filltank 2 100 
+[Info]: Valve is Open
+[Info]: 100 Unit Fuel Added to Tank 2
+====================================================
+[COMMAND]: listfueltanks 
+Internal [0] Tank's :  Fullnes =    0 /  55       Valve = 0      Broken = 0
+External [1] Tank's :  Fullnes =  150 / 300       Valve = 1      Broken = 0   Connected = 0
+External [2] Tank's :  Fullnes =  100 / 150       Valve = 1      Broken = 0   Connected = 0
+External [3] Tank's :  Fullnes =    0 / 100       Valve = 0      Broken = 0   Connected = 0
+====================================================
+[COMMAND]: DRAINOVERLOAD 0 1 2 
+[ERROR]: Command Is Not Exist !
+====================================================
+[COMMAND]: printengineinfo 
+[Info]: Engine's :     Status = 0         Full Throttle = 0      Health = 100        Heat = 20
+Internal [0] Tank's :  Fullnes =    0 /  55       Valve = 0      Broken = 0
+====================================================
+[COMMAND]: connectfueltanktoengine 1 
+[Info]: Tank 1 Connected to Engine.
+====================================================
+[COMMAND]: connectfueltanktoengine 2 
+[Info]: Tank 2 Connected to Engine.
+====================================================
+[COMMAND]: connectfueltanktoengine 3 
+[Info]: Tank 3 Connected to Engine.
+====================================================
+[COMMAND]: removefueltank 5 
+[ERROR]: Invalid Tank ID : 5
+====================================================
+[COMMAND]: disconnectfueltankfromengine 0 
+[ERROR]: Invalid Tank ID !
+====================================================
+[COMMAND]: openvalve 1 
+[Info]: Valve is Open
+====================================================
+[COMMAND]: openvalve 2 
+[Info]: Valve is Open
+====================================================
+[COMMAND]: addfueltank 80 
+[Info]: New Tank 4
+====================================================
+[COMMAND]: filltank 2 150 
+[Info]: 150 Unit Fuel Added to Tank 2
+====================================================
+[COMMAND]: filltank 4 40 
+[Info]: Valve is Open
+[Info]: 40 Unit Fuel Added to Tank 4
+====================================================
+[COMMAND]: filltank 1 100 
+[Info]: 100 Unit Fuel Added to Tank 1
+====================================================
+[COMMAND]: listfueltanks 
+Internal [0] Tank's :  Fullnes =    0 /  55       Valve = 0      Broken = 0
+External [1] Tank's :  Fullnes =  250 / 300       Valve = 1      Broken = 0   Connected = 1
+External [2] Tank's :  Fullnes =  150 / 150       Valve = 1      Broken = 0   Connected = 1
+External [3] Tank's :  Fullnes =    0 / 100       Valve = 0      Broken = 0   Connected = 1
+External [4] Tank's :  Fullnes =   40 /  80       Valve = 1      Broken = 0   Connected = 0
+====================================================
+[COMMAND]: removefueltank 3 
+[Info]: Tank 3 is Removed.
+====================================================
+[COMMAND]: listfueltanks 
+Internal [0] Tank's :  Fullnes =    0 /  55       Valve = 0      Broken = 0
+External [1] Tank's :  Fullnes =  250 / 300       Valve = 1      Broken = 0   Connected = 1
+External [2] Tank's :  Fullnes =  150 / 150       Valve = 1      Broken = 0   Connected = 1
+External [4] Tank's :  Fullnes =   40 /  80       Valve = 1      Broken = 0   Connected = 0
+====================================================
+[COMMAND]: fullthrottle 3 
+====================================================
+[COMMAND]: startengine 
+[Info]: Fuel Added to Engine +55
+-----------------------------------
+[Info]: Engine is On
+====================================================
+[Info]: Fuel Added to Engine +0
+-----------------------------------
+[Info]: Engine's heat is 25
+[Info]: Engine's health is 98
+---------------------------------- 
+[COMMAND]: wait 3 
+[Info]: Fuel Added to Engine +27.5
+-----------------------------------
+[Info]: Engine's heat is 30
+[Info]: Engine's health is 97
+---------------------------------- 
+[Info]: Remaining 2..
+[Info]: Fuel Added to Engine +27.5
+-----------------------------------
+[Info]: Engine's heat is 35
+[Info]: Engine's health is 96
+---------------------------------- 
+[Info]: Remaining 1..
+[Info]: Engine's heat is 36
+[Info]: Engine's health is 96
+---------------------------------- 
+[Info]: Remaining 0..
+====================================================
+[Info]: Engine's heat is 37
+[Info]: Engine's health is 96
+---------------------------------- 
+[COMMAND]: changeengineblock 
+[ERROR]: Engine Block can not be changed while engine is running !
+====================================================
+[Info]: Fuel Added to Engine +38.5
+-----------------------------------
+[Info]: Engine's heat is 38
+[Info]: Engine's health is 96
+---------------------------------- 
+[COMMAND]: listfueltanks 
+Internal [0] Tank's :  Fullnes = 49.5 /  55       Valve = 0      Broken = 0
+External [1] Tank's :  Fullnes = 101.5 / 300       Valve = 1      Broken = 0   Connected = 1
+External [2] Tank's :  Fullnes =  150 / 150       Valve = 1      Broken = 0   Connected = 1
+External [4] Tank's :  Fullnes =   40 /  80       Valve = 1      Broken = 0   Connected = 0
+====================================================
+[Info]: Engine's heat is 39
+[Info]: Engine's health is 96
+---------------------------------- 
+[COMMAND]: printfueltankcount 
+[Info]: Count Of Fuel Tanks = 4
+====================================================
+[Info]: Engine's heat is 40
+[Info]: Engine's health is 96
+---------------------------------- 
+[COMMAND]: listconnectedtanks 
+External [1] Tank's :  Fullnes = 101.5 / 300       Valve = 1      Broken = 0   Connected = 1
+External [2] Tank's :  Fullnes =  150 / 150       Valve = 1      Broken = 0   Connected = 1
+====================================================
+[Info]: Engine's heat is 41
+[Info]: Engine's health is 96
+---------------------------------- 
+[COMMAND]: stopengine 
+[Info]: Engine is Off.
+====================================================
+[COMMAND]: printengineinfo 
+[Info]: Engine's :     Status = 0         Full Throttle = 0      Health = 96        Heat = 40
+Internal [0] Tank's :  Fullnes =   33 /  55       Valve = 0      Broken = 0
+====================================================
+[COMMAND]: repairengine 
